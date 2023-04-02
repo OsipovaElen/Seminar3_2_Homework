@@ -1,23 +1,20 @@
-//Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
+//Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
 
 
-Console.WriteLine("Введите число: ");
+Console.WriteLine(" Введите число N для вычисления кубов чисел от 1 до N: ");
 string number = Console.ReadLine();
-int num = int.Parse(number);
+int N = int.Parse(number);
 
-if (0 < num & num < 8)
+int[] cub = new int[0];
+for (int i = 1; i <= N; i++)
 {
-    if (num == 6 | num == 7)
+    Console.Write(Math.Pow(i, 3)); 
+    if (i != N)
     {
-        Console.Write("Выходной");
+        Console.Write(", ");
     }
     else
     {
-        Console.Write("Рабочий день");
+       break; 
     }
-
-}
-else
-{
-    Console.Write("Число не означает день недели");
 }
